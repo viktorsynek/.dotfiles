@@ -9,7 +9,7 @@ I use Windows 10, and WSL2 with Ubuntu 20.04 as my primary development environme
 I use Brave as my main web browser, with DuckDuckGo as my search engine.
 
 ## Terminal
-I use the zsh shell with oh-my-zsh, config @ `zsh` directory.
+I use the zsh shell with oh-my-zsh, config @ [zsh](https://github.com/viktorsynek/.dotfiles/tree/main/zsh) directory.
 
 I also use tmux for terminal multiplexing, config @ `tmux` directory.
 
