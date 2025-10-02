@@ -19,6 +19,8 @@ I use Neovim as my primary text editor, config @ [nvim](https://github.com/vikto
 #### Window Manager
 I use GlazeWM and Zebar as my window manager on Windows, config @ [glaze](https://github.com/viktorsynek/.dotfiles/tree/main/glaze) directory.
 
+Zebar theme: [rose-pine](https://github.com/m4rshe1/zebar-rose-pine-pp)
+
 #### keyboard
 I use ZSA Moonlander, keyboard layout @ [moonlander](https://github.com/viktorsynek/.dotfiles/tree/main/moonlander) directory.
 
