@@ -14,7 +14,7 @@ I also use tmux for terminal multiplexing, config @ [tmux](https://github.com/vi
 I use Neovim as my primary text editor, config @ [nvim](https://github.com/viktorsynek/.dotfiles/tree/main/nvim) directory.
 
 #### Window Manager
-I use i3 as my window manager on Linux, config @ [i3wlaze](https://github.com/viktorsynek/.dotfiles/tree/main/i3) directory.
+I use i3 as my window manager on Linux, config @ [i3](https://github.com/viktorsynek/.dotfiles/tree/main/i3) directory.
 
 I use GlazeWM and Zebar as my window manager on Windows, config @ [glaze](https://github.com/viktorsynek/.dotfiles/tree/main/glaze) directory.
 
