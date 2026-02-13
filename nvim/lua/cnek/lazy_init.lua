@@ -14,4 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = "cnek.lazy",
     change_detection = { notify = false }
+}, {
+  rocks = {
+    hererocks = false,  -- Use system luarocks instead
+  },
 })

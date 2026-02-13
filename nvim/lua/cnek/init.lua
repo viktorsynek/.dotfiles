@@ -4,7 +4,6 @@ require("cnek.lazy_init")
 
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})
-
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
 
@@ -29,23 +28,23 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = ThePrimeagenGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
 
+-- FIXED: Call ColorMyPencils instead of vim.cmd.colorscheme
 autocmd('BufEnter', {
     group = ThePrimeagenGroup,
     callback = function()
         if vim.bo.filetype == "zig" then
-            vim.cmd.colorscheme("tokyonight-night")
+            ColorMyPencils("tokyonight-night")
         else
-            vim.cmd.colorscheme("xcodedarkhc")
+            ColorMyPencils("xcodedarkhc")
         end
     end
 })
-
 
 autocmd('LspAttach', {
     group = ThePrimeagenGroup,
@@ -78,7 +77,6 @@ vim.api.nvim_create_autocmd("InsertEnter", {
             vim._backup_formatoptions = vim.opt.formatoptions:get()
             vim._backup_autoindent = vim.opt.autoindent:get()
             vim._backup_smartindent = vim.opt.smartindent:get()
-
             vim.opt.formatoptions:remove({ "r", "o" }) -- Don't auto-continue comments
             vim.opt.autoindent = false
             vim.opt.smartindent = false
@@ -94,12 +92,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
             vim.opt.formatoptions = vim._backup_formatoptions
             vim._backup_formatoptions = nil
         end
-
         if vim._backup_autoindent ~= nil then
             vim.opt.autoindent = vim._backup_autoindent
             vim._backup_autoindent = nil
         end
-
         if vim._backup_smartindent ~= nil then
             vim.opt.smartindent = vim._backup_smartindent
             vim._backup_smartindent = nil
@@ -108,16 +104,3 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 vim.opt.formatoptions:remove({ "r", "o" })
-
-vim.g.clipboard = {
-  name = 'win32yank',
-  copy = {
-    ['+'] = 'timeout 2 win32yank.exe -i --crlf',
-    ['*'] = 'timeout 2 win32yank.exe -i --crlf',
-  },
-  paste = {
-    ['+'] = 'timeout 2 win32yank.exe -o --lf',
-    ['*'] = 'timeout 2 win32yank.exe -o --lf',
-  },
-  cache_enabled = 1,
-}

@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+vim.keymap.set("n", "<leader>zm", vim.cmd.ZenMode)
+
 vim.keymap.set('n', '<leader>bc', function()
     local line = vim.api.nvim_get_current_line()
     local new_line
