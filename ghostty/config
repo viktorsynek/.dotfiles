@@ -1,0 +1,33 @@
+theme = Catppuccin Frappe
+
+# title
+window-decoration = none
+title="cnek's terminal"
+macos-titlebar-style = hidden
+
+# bg
+background=#181c26
+background-opacity = 0.90
+background-blur-radius = 20
+
+# fg
+font-size=16
+font-thicken=true
+font-thicken-strength=20
+font-feature = -calt
+font-feature = -dlig
+
+# cursor
+cursor-style = block
+cursor-style-blink = true
+cursor-invert-fg-bg = true
+cursor-opacity = .8
+
+# other
+mouse-scroll-multiplier = 0.5
+selection-invert-fg-bg = true
+bold-is-bright = true
+minimum-contrast = 2
+shell-integration-features = no-cursor
+copy-on-select = clipboard
+

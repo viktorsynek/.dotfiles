@@ -9,7 +9,6 @@ set $mod Mod1
 font pango:monospace 11
 
 focus_follows_mouse no
-exec --no-startup-id picom
 
 for_window [class="^.*"] border pixel 0
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
@@ -50,7 +49,8 @@ workspace 3 output DVI-D-0
 workspace 4 output DVI-D-0
 
 # Open terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec ghostty
 
 # Close focused window
 bindsym $mod+Shift+q kill
@@ -123,8 +123,15 @@ bindsym $mod+Shift+a exec pavucontrol
 # OBS
 bindsym $mod+Shift+o exec obs
 
+# Teams
+bindsym $mod+Shift+m exec teams-for-linux
+
 # GIMP
 bindsym $mod+Shift+g exec gimp
+
+# Picom
+bindsym $mod+y exec picom
+bindsym $mod+Shift+y exec pkill picom
 
 # Night Light
 bindsym $mod+n exec redshift -O 4500

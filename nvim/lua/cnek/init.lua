@@ -34,14 +34,13 @@ autocmd({ "BufWritePre" }, {
     command = [[%s/\s\+$//e]],
 })
 
--- FIXED: Call ColorMyPencils instead of vim.cmd.colorscheme
 autocmd('BufEnter', {
     group = ThePrimeagenGroup,
     callback = function()
         if vim.bo.filetype == "zig" then
             ColorMyPencils("tokyonight-night")
         else
-            ColorMyPencils("xcodedarkhc")
+            ColorMyPencils("rose-pine-moon")
         end
     end
 })

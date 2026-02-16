@@ -28,7 +28,7 @@ i3-msg "exec discord"
 # Open Spotify (bottom)
 i3-msg "exec spotify"
 
-sleep 4
+sleep 5
 
 # Move Discord to top
 i3-msg '[class="discord"] focus'
