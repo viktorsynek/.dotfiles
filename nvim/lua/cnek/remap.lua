@@ -23,3 +23,4 @@ vim.keymap.set('v', '<leader>y', '"+Y', { desc = 'Paste from clipboard with prop
 
 vim.keymap.set('n', '<leader>p', '"+P', { desc = 'Paste from clipboard with proper indenting' })
 vim.keymap.set('v', '<leader>p', '"+P', { desc = 'Paste from clipboard with proper indenting' })
+
