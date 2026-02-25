@@ -15,7 +15,7 @@ sleep 1
 # Workspace 2: browser on primary
 i3-msg "workspace 2; exec brave-browser"
 
-sleep 3
+sleep 5
 
 # Workspace 3: Discord + Spotify on secondary, vertical monitor layout
 i3-msg "workspace 3"
@@ -28,7 +28,7 @@ i3-msg "exec discord"
 # Open Spotify (bottom)
 i3-msg "exec spotify"
 
-sleep 5
+sleep 8
 
 # Move Discord to top
 i3-msg '[class="discord"] focus'

@@ -77,6 +77,12 @@ bindsym $mod+Shift+7 move container to workspace 7; workspace 7
 bindsym $mod+Shift+8 move container to workspace 8; workspace 8
 bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 
+# Focus next window
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
 # Move windows around in container layout
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
@@ -124,7 +130,7 @@ bindsym $mod+Shift+a exec pavucontrol
 bindsym $mod+Shift+o exec obs
 
 # Teams
-bindsym $mod+Shift+m exec teams-for-linux
+bindsym $mod+Shift+t exec teams-for-linux
 
 # GIMP
 bindsym $mod+Shift+g exec gimp
